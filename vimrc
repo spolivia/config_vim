@@ -65,13 +65,12 @@ hi CursorLine   cterm=NONE ctermbg=darkgrey ctermfg=black guibg=darkgrey guifg=b
 autocmd InsertEnter * set nocursorline
 autocmd InsertLeave * set cursorline
 
-
 " --------------
 " --- interface 
 " --------------
 
 set showcmd 				        " Affiche les commandes en cours de frappe
-set backspace=indent,eol,start		" FIXME BS past autoindents, line boundaries, and the start of insertion 
+set backspace=indent,eol,start		" Permet d'effacer l'indentation automatique, les retours chariots et d'aller au dela de l'endroit d'activation du mode insert
 set history=1000			        " Historique plus long
 set wildmenu				        " Active le menu de complétion sur la touche tab
 set wildmode=longest:full,full
@@ -79,7 +78,6 @@ set mouse=a				            " Support souris (scroll,selection, etc.)
 set scrolloff=3				        " Affiche toujours 3 lignes pre/post curseur
 set sidescrolloff=5			        " Affiche toujours 5 colonnes pre/post curseur
 set autoread				        " Relit un fichier si modifié en dehors de vim
-
 
 
 set number				            " Affiche les numéros de ligne
@@ -102,22 +100,21 @@ highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=N
 
 set directory=$HOME/.vim/swap_files//	" Stockage des swap files dans ~/.vim/swap_files
 set backupdir=$HOME/.vim/backup_files// " Stockage des backups dans ~/.vim/backup_files
-set nowb				                " FIXME ???
+set nowritebackup		                " Enregistre directement dans le fichier (plutot que de passer par un fichier temporaire)
 set exrc				                " Autorise des fichiers vimrc propres aux projets
  
 " --------------
 " --- Encodage et rendu des caractères
 " --------------
 
-set encoding=utf-8		    	" FIXME ???
-set tabstop=4       			" FIXME tab stops at every 4 spaces
+set encoding=utf-8		    	" Definition du charset de travail de vim (buffer,registres,...), possible d'avoir un fichier dans un charset different avec fileencoding
+set tabstop=4       			" Reduit l'affiche d'un <TAB> à 4 espaces (defaut a 8) (attention pose problèmes d'incohérences de rendu)
 set shiftwidth=4    			" indente par 4 colonnes
 set expandtab       			" Convertit tous les tabs qui sont tapés en espaces
-set nowrap				        " Les lignes longues sont affichées tronquées
-set linebreak				    " FIXME ???
+set nowrap				        " Les lignes longues ne sont pas affichées tronquées
+set linebreak				    " Ne permet la troncature de ligne que sur les caractères de 'breakat' (inutile avec nowrap)
 
-syntax enable				    " FIXME
-
+syntax enable				    " active la coloration syntaxique
 
 " --------------
 " --- Tricks
@@ -136,5 +133,4 @@ let g:ConqueTerm_CloseOnEnd = 1
 let g:ConqueTerm_InsertOnEnter = 0
 let g:ConqueTerm_StartMessages = 1                                                    
 let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
-
 
