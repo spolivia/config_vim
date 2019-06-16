@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'vim-scripts/Conque-GDB'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()
 filetype plugin indent on
@@ -122,15 +123,26 @@ syntax enable				    " active la coloration syntaxique
 
 set timeoutlen=1000 ttimeoutlen=0   " Annule le petit délai lors du retour en mode normal
 
-
 " --------------
 " --- Plugin ConqueGdb 
 " --------------
-"
+
 let g:ConqueGdb_Leader = ','
 let g:ConqueTerm_Color = 2                                                            
 let g:ConqueTerm_CloseOnEnd = 1                                                       
 let g:ConqueTerm_InsertOnEnter = 0
 let g:ConqueTerm_StartMessages = 1                                                    
 let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
+
+" --------------
+" --- Plugin Nerdcommenter 
+" --------------
+
+nnoremap ² :call NERDComment(0,"toggle") <CR>
+vnoremap ² :call NERDComment(0,"toggle") <CR>
+
+let g:NERDDefaultAlign = 'left'
+let g:NERDSpaceDelims = 2                         " Add spaces after comment delimiters by default
+let g:NERDCommentEmptyLines = 1                   " Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDAltDelims_c = 1                         " Set C to use its alternate delimiters by default
 
