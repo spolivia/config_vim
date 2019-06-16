@@ -141,8 +141,8 @@ let g:ConqueGdb_ToggleBreak = g:ConqueGdb_Leader . 'b'
 nnoremap ² :call NERDComment(0,"toggle") <CR>
 vnoremap ² :call NERDComment(0,"toggle") <CR>
 
-let g:NERDDefaultAlign = 'left'
-let g:NERDSpaceDelims = 2                         " Add spaces after comment delimiters by default
-let g:NERDCommentEmptyLines = 1                   " Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDAltDelims_c = 1                         " Set C to use its alternate delimiters by default
+let g:NERDDefaultAlign = 'left'                   " Place le commentaire à gauche et non pas en suivant l'indentation
+let g:NERDSpaceDelims = 2                         " Ajoute des espaces après le début du commentaire
+let g:NERDCommentEmptyLines = 1                   " Traite les lignes vides ( utile si on commente une région )
+let g:NERDAltDelims_c = 1                         " Utilise les commentaires alternatifs (//) pour le langage C
 
