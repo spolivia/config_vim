@@ -66,13 +66,11 @@ set t_Co=256                        " Passage en mode temrinal 256 couleurs
 set background=dark			        " Choix d'un fond sombre
 colorscheme blueice                 " Thème couleur
 
-
 " --------------
 " --- Cursorline 
 " --------------
 
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkgrey ctermfg=black 
 
 autocmd InsertEnter * set nocursorline
 autocmd InsertLeave * set cursorline
@@ -93,7 +91,6 @@ set autoread				        " Relit un fichier si modifié en dehors de vim
 
 
 set number				            " Affiche les numéros de ligne
-highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 
 
 " --------------

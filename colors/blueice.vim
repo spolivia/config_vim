@@ -50,4 +50,7 @@ hi VisualNOS	cterm=bold,underline
 hi WarningMsg	ctermfg=7
 hi WildMenu	    ctermfg=0 ctermbg=3
 
+hi CursorLine   cterm=NONE ctermbg=darkgrey ctermfg=black 
+hi LineNr       cterm=NONE ctermfg=DarkGrey ctermbg=NONE 
+
 "vim: sw=4
