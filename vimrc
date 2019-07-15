@@ -57,12 +57,23 @@ nnoremap <C-LEFT>  :bprev<CR>
 nnoremap <C-UP> :tabn<CR>	
 nnoremap <C-DOWN>  :tabp<CR>
 
+
+" --------------
+" --- Colors 
+" --------------
+
+set t_Co=256                        " Passage en mode temrinal 256 couleurs
+set background=dark			        " Choix d'un fond sombre
+colorscheme druon                   " Thème couleur
+
+
 " --------------
 " --- Cursorline 
 " --------------
 
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkgrey ctermfg=black guibg=darkgrey guifg=black
+hi CursorLine   cterm=NONE ctermbg=darkgrey ctermfg=black 
+
 autocmd InsertEnter * set nocursorline
 autocmd InsertLeave * set cursorline
 
@@ -89,10 +100,9 @@ highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=N
 " --- Reglages activés par défaut 
 " --------------
 
-" set background=dark			    " Choix d'un fond sombre
-" set showmode				        " Affiche le mode (insert/visual) 
-" set ruler				            " Affiche la position dans le fichier en bas à droite
-" set title				            " Affiche le titre dans la barre du terminal
+set showmode				        " Affiche le mode (insert/visual) 
+set ruler				            " Affiche la position dans le fichier en bas à droite
+set title				            " Affiche le titre dans la barre du terminal
 
 " --------------
 " --- Fichiers Swap et Backup
