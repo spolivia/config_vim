@@ -64,7 +64,7 @@ nnoremap <C-DOWN>  :tabp<CR>
 
 set t_Co=256                        " Passage en mode temrinal 256 couleurs
 set background=dark			        " Choix d'un fond sombre
-colorscheme druon                   " Thème couleur
+colorscheme blueice                 " Thème couleur
 
 
 " --------------

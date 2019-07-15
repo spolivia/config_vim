@@ -1,14 +1,7 @@
 " Vim color file
-" Maintainer:	Sebastien Druon <seb@homedruon.com>
+" Maintainer:	Glacon Bleu <glaconbleu@codices.org>
 " Last Change:	$Date: 2019/07/16 00:13:00 $
-" Last Change:	$Date: 2019/07/16 00:13:00 $
-" URL:		http://hans.fugal.net/vim/colors/druon.vim
-" Version:	$Id: druon.vim,v 1.1 2004/06/13 19:30:30 vimboss Exp $
-
-" cool help screens
-" :he group-name
-" :he highlight-groups
-" :he cterm-colors
+" Version:	    $Id: blueice.vim,v 1.1 $
 
 set background=dark
 if version > 580
@@ -20,7 +13,7 @@ if version > 580
     endif
 endif
 
-let g:colors_name="druon"
+let g:colors_name="blueice"
 
 hi Comment	    ctermfg=7
 hi Constant	    ctermfg=7
