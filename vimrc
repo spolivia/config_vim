@@ -1,4 +1,4 @@
-" --------------
+" --- Installatio--------------
 " --- Installation du plugin manager
 " --------------
 
@@ -64,7 +64,7 @@ nnoremap <C-DOWN>  :tabp<CR>
 
 set t_Co=256                        " Passage en mode temrinal 256 couleurs
 set background=dark			        " Choix d'un fond sombre
-colorscheme blueice                 " Thème couleur
+colorscheme picquacolor                 " Thème couleur
 
 " --------------
 " --- Cursorline 
@@ -84,7 +84,7 @@ set backspace=indent,eol,start		" Permet d'effacer l'indentation automatique, le
 set history=1000			        " Historique plus long
 set wildmenu				        " Active le menu de complétion sur la touche tab
 set wildmode=longest:full,full
-set mouse=a				            " Support souris (scroll,selection, etc.)
+set mouse=v				            " Support souris (scroll,selection, etc.)
 set scrolloff=3				        " Affiche toujours 3 lignes pre/post curseur
 set sidescrolloff=5			        " Affiche toujours 5 colonnes pre/post curseur
 set autoread				        " Relit un fichier si modifié en dehors de vim
